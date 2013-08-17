@@ -1,0 +1,9 @@
+2013-07-07 14:43:32
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (20.51-b01-456 mixed mode):
+
+"Thread-16" daemon prio=4 tid=10ee26800 nid=0x12b7a4000 waiting on condition [12b7a3000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.jivesoftware.smack.PacketWriter$KeepAliveTask.run(PacketWriter.java:476)
+	at java.lang.Thread.run(Thread.java:680)
+
