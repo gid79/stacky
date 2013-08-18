@@ -41,7 +41,7 @@ module Stacky
           end
         end        
       end
-      d
+      [d]
     end
       
   end
