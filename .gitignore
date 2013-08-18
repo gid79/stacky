@@ -24,3 +24,5 @@ doc/
 *.tmproj
 *.tmproject
 tmtags
+
+*.lock
