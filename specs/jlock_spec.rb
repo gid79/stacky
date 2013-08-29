@@ -1,8 +1,8 @@
 
 require 'stacky'
 
-describe Stacky::JLock, "constructor" do
-  context "creating from a string" do
+describe Stacky::JLock, 'constructor' do
+  context 'creating from a string' do
     it "locked state" do
       result = Stacky::JLock.new "- locked <7c47230e0> (a java.net.SocksSocketImpl)"
       expect(result.locked).to be true
