@@ -11,7 +11,7 @@ module Stacky
           # at java.lang.Object.wait(Object.java:485)
           JStackframe.parse_line stripped_line
         when /^-.*$/
-          JLock.new stripped_line
+          JLock.parse_line stripped_line
         else
           puts "Warning: Unable to parse #{line}"
           nil
