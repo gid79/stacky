@@ -31,7 +31,7 @@ module Stacky
           # puts "empty line #{current}"
           if not current.empty?
             # puts "parsing JThread"
-            d.threads << JThread.new(current)            
+            d.threads << JThread.parse(current)
           end
           current = []          
         else
