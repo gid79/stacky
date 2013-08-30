@@ -1,5 +1,4 @@
 
-require 'stacky'
 require_relative 'spec_helper'
 
 describe Stacky::Dump, '#parse' do

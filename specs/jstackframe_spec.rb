@@ -1,8 +1,5 @@
 
-dir = File.dirname(File.expand_path(__FILE__))
-$LOAD_PATH.unshift dir + '/../lib'
-
-require 'stacky'
+require_relative 'spec_helper'
 
 describe Stacky::JStackframe, '#parse_line' do
   it 'should parse a simple stack frame' do
