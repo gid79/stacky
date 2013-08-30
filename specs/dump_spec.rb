@@ -3,7 +3,7 @@ require_relative 'spec_helper'
 
 describe Stacky::Dump, '#parse' do
   it 'should be able to parse complete_single.txt' do
-    result = Stacky::Dump.parse(open(fixture('complete_single.txt'))).first()
+    result = Stacky::Dump.parse(open(fixture('complete_single.txt')).lines)
     result.ts.should eq('2013-07-07 14:43:32')
     result.jvm_build.should eq('20.51-b01-456')
     expect(result.jni_global_references).to eq(3520)
@@ -11,7 +11,7 @@ describe Stacky::Dump, '#parse' do
   end
   
   it 'should parse min.txt' do
-    result = Stacky::Dump.parse(open(fixture('min.txt'))).first()
+    result = Stacky::Dump.parse(open(fixture('min.txt')).lines)
     expect(result.threads.size).to eq(1)
   end
 end

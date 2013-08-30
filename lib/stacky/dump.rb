@@ -1,18 +1,22 @@
 
 
 module Stacky
+
   class Dump
     attr_accessor :ts,:jvm_build, :threads, :jni_global_references
     
-    def initialize()
+    def initialize
       @threads = []
     end
-    
-    def self.parse(input)
+
+    # parse a Enumerable of lines from a jstack dump
+    # lines - required lines
+    # returns a single Dump
+    def self.parse(lines)
       d = Dump.new
       current = []
             
-      input.lines.each do |line| 
+      lines.each do |line|
         line = line.strip
         case line
         when /2\d{3}-\d\d-\d\d \d\d:\d\d:\d\d/
@@ -41,9 +45,7 @@ module Stacky
           end
         end        
       end
-      [d]
+      d
     end
-      
   end
-
 end
