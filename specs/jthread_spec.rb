@@ -2,6 +2,7 @@
 require_relative 'spec_helper'
 
 describe Stacky::JThread, 'parse' do
+  
   it 'should extract the first line details' do
     result = Stacky::JThread.parse ['"Thread-16" daemon prio=4 tid=10ee26800 nid=0x12b7a4000 waiting on condition [12b7a3000]']
     expect(result.name).to eq('Thread-16')
